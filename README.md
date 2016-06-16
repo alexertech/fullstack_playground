@@ -4,19 +4,44 @@ If you want to develop a simple TO-DO application with MEAN (MongoDB, Express, A
 
 ### Getting Started
 
-Create the basic structure for our app:
+Currently you can download from this repo a Working app for a basic TO-DO list. This will demonstrate how easily you can create apps with MEAN and do your own testing and improvements. The repo has the last working version and differs from the basic tutorial below. All the code is commented so you can guide yourself in the entire process by just reading the files.
+
+### TODO
+- Change the TO-DO list application to a simple contacts manager (name, email)
+- Improve tutorial and comments
+
+## Authors
+
+* **Alex Barrios** - *Improvements and Fixes over the original source* - [alexertech](https://github.com/alexertech)
+* **Scotch.IO** - *Original Tutorial* - [scotch.io](https://scotch.io/tutorials/creating-a-single-page-todo-app-with-node-and-angular)
+
+See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
+
+## License
+
+This project is licensed under the GNU General Public License V3.0 - see the [LICENSE.md](LICENSE.md) file for details.
+
+Please if you use the project, say HI! in [twitter](http://twitter.com/alexertech) :)
+
+### Walkthrough First steps with MEAN
+
+The current status of the repository have a different version of the first steps Walkthrough, but if you want to start with a very basic setup you can follow this steps.
+
+First, lets create the structure for our app:
 
 ```
-  $ mkdir mean
-  $ cd mean/
-  $ mkdir public
-  $ touch public/core.js
-  $ touch public/index.html
-  $ touch server.js
-  $ touch package.json
+$ mkdir mean
+$ cd mean/
+$ mkdir public
+$ touch public/core.js
+$ touch public/index.html
+$ touch server.js
+$ touch package.json
 ```
 
-### Node setup
+## npm configuration
+
+Required to install dependencies/modules
 
 ```
   {
@@ -35,7 +60,7 @@ Create the basic structure for our app:
   }
 ```
 
-### Node Installation
+## Node Installation
 Lets install node
 
 ```
@@ -43,7 +68,7 @@ Lets install node
 ```
 
 
-### MongoDB for the database
+## MongoDB for the database
 
 ```
 $ export LC_ALL=C
@@ -64,7 +89,7 @@ $ mongod
 2016-06-16T01:27:43.271+0000 I CONTROL  [initandlisten] dbexit:  rc: 100
 ```
 
-### Moar node configuration
+## Moar node configuration
 
 Now lets configure the basic node server in server.js
 
@@ -114,7 +139,7 @@ at least we can check if is working.
   node server.js
 ```
 
-### AngularJS for the Frontend
+## AngularJS for the Frontend
 
 As our fellows at scotch.io explain:
 ```
@@ -130,7 +155,7 @@ build different apps on different platforms since you just have to hit the API.
 
 All our configuration for the AngularJS controller will be in the core.js file, and the output will be in the index.html on the same directory (public).
 
-### Connecting MongoDB with Node
+## Connecting MongoDB with Node
 
 We need to add this to the server.js, the model will define the structure of our database in mongo.
 ```
@@ -147,7 +172,7 @@ var Todo = mongoose.model('Todo', {
 (snip)
 ```
 
-### Express for the routing in Angular:
+## Express for the routing in Angular:
 
 ```
 (snip)
@@ -224,20 +249,3 @@ app.get('*', function(req, res) {
 ```
 
 At this point, if you run the node server, everything should work smoothly.
-
-### TODO
-- Add more features
-- Improve tutorial
-
-## Authors
-
-* **Alex Barrios** - *Improvements and Fixes over the original source* - [alexertech](https://github.com/alexertech)
-* **Scotch.IO** - *Original Tutorial* - [scotch.io](https://scotch.io/tutorials/creating-a-single-page-todo-app-with-node-and-angular)
-
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
-
-## License
-
-This project is licensed under the GNU General Public License V3.0 - see the [LICENSE.md](LICENSE.md) file for details.
-
-Please if you use the project, say HI! in [twitter](http://twitter.com/alexertech) :)
