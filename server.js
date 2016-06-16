@@ -15,8 +15,8 @@ var methodOverride = require('method-override');
 
 // configuration =================
 
-// connect to mongoDB database on modulus.io
-mongoose.connect('mongodb://node:nodeuser@mongo.onmodulus.net:27017/uwO3mypu');
+// connect to mongoDB database
+mongoose.connect('mongodb://localhost/MEAN_TEST');
 
 // set the static files location /public/img will be /img for users
 app.use(express.static(__dirname + '/public'));
